@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 1500px;
+    margin: 0 auto;
+}
+
+header{
+    background-color: black;
+    padding: 30px;
+}
+
+nav ul{
+    list-style: none;
+    margin-left: 999px;
+}
+
+nav ul li a{
+    color: blanchedalmond;
+    font-family: ;
+    font-size: 25px;
+    margin-left: 20px;
+}
+
+figure img{
+    width: 100%;
+    max-height: 900px;
+    object-fit: cover;
+    position: relative;
+}
+
+.name{
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.233);
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Fugaz One', cursive;
+
+    position: absolute;
+    left: 550px;
+    top: 150px;
+}
+
+.video{
+    background-color: black;
+    padding: 15px;
+    position: absolute;
+    left: 470px;
+    top: 450px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
