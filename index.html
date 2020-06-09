@@ -1,99 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FIGMA</title>
-  </head>
-  <body>
-    <main>
-      <section>
-        <h1>Pachaqtec</h1>
-        <h2>Hola, Mi nombre es Mery Vera</h2>
-        <img src="./images2/banner.png" alt="banner">
-        <img src="./images2/hola.png" alt="hola">
-      </section>
-      <section>
-        <h2>Sobre mi</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae sed
-          dolor similique saepe dolores, dolorem possimus, suscipit maiores
-          voluptatibus rem dolore, quam temporibus explicabo alias. Quod quos
-          sed eos est molestias magnam dolorem iusto doloremque eveniet deleniti
-          temporibus ad, natus hic non sit impedit inventore quae nemo? Esse
-          adipisci sit asperiores sint voluptate illum dicta eos consequatur,
-          placeat delectus illo possimus iusto repellat cum, alias itaque
-          tenetur sunt eligendi quaerat facere? Deleniti molestias id, eos
-          accusantium illo laborum autem nemo, facilis recusandae cupiditate
-          quis et. Rerum laboriosam autem sint totam quae, facere cum quo
-          aliquam soluta temporibus fuga modi quibusdam.
-        </p>
-        <a href="https://www.google.com.pe/">Ver Cv</a>
-      </section>
-      <section>
-        <h2>Mis Skills</h2>
-        <!--Mejor es usar div en vez de ul-li, porque REACT no acepta qe dentro de 1 ul haya divs, sino alreves por la relevancia-->
-        <div>
-            <h3>HTML</h3>
-        </div>
-        <div>
-            <h3>CSS</h3>
-          </div>
-          <div>
-            <h3>Javascript</h3>
-          </div>
-          <div>
-            <h3>Vue</h3>
-          </div>
-          <div>
-            <h3>Flexbox</h3>
-          </div>
-          <div>
-            <h3>CSS Grid</h3>
-          </div>
-      </section>
-      <section>
-        <h2>Portafolio</h2>
-        <figure>
-          <img src="./images2/image-4.png" alt="4">
-          <img src="./images2/image-5.png" alt="5">
-          <img src="./images2/image-6.png" alt="6">
-          <img src="./images2/image-7.png" alt="7"
-          <img src="./images2/image-8.png" alt="8">
-          <img src="./images2/image-9.png" alt="9">
-          <img src="./images2/image-10.png"alt="10">
-        </figure>
-      </section>
-      <section>
-        <h2>Clientes</h2>
-        <figure>
-          <img src="./images2/image.png" alt="0">
-          <img src="./images2/image-1.png" alt="1">
-          <img src="./images2/image-2.png" alt="2">
-          <img src="./images2/image-3.png" alt="3">
-      </section>
-      <section>
-        <h3>Contacto</h2>
-        <form action="#">
-          <div class="form-group">
-            <input class="form-input left" type="text" placeholder="Nombre" pattern="[A-Za-z]+">
-            <input class="form-input right" name="apellido" type="text" placeholder="Apellido" pattern="[A-Za-z]+">
-          </div>
-          <div class="form-group">
-            <input class="form-input left" type="email" placeholder="E-mail">
-            <input class="form-input right" type="number" placeholder="DNI" pattern="[A-Za-z0-9]+">
-          </div>
-          <div class="form-group">                          
-            <label style="color: white;">Descripción <br>
-               <textarea cols="83" rows="5"></textarea>
-            </label>
-          </div>
-          <div class="form-group">
-            <button>Enviar</button>
-            <button type="reset">Resetear</button>
-          </div>
-        </form>
-      </section>
-    </main>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form type="GET" action="#">
+        <label for="name">Nombre</label> 
+        <input id="name" type="text" placeholder="Nombre">
+
+        <label for="lastname">Apellido</label> 
+        <input id="lastname" type="text" placeholder="Apellido">
+        <br><br>
+        <label for="age">Edad</label> 
+        <input id="age" type="number" placeholder="Edad">
+        <br><br>
+        <label for="country">Nacionalidad</label> 
+        <select id="country" name="">
+        <!--el atributo name es para que el backend lo coja-->
+            <option value="">Selecciona tu país</option>
+            <option value="1">Perú</option>
+            <option value="2">Colombia</option>
+            <option value="3">Argentina</option>
+            <option value="4">Brasil</option>
+        </select>
+        <br><br>
+        <label for="district">Distrito</label> 
+        <input id="district" type="text" placeholder="Distrito">
+
+        <label for="mobile">Celular</label> 
+        <input id="mobile" type="number" placeholder="Celular">
+        <br><br>
+        <label for="email">Correo</label> 
+        <input id="email" type="email" placeholder="Correo">
+        <br><br>
+        <fieldset>
+          <legend>Sexo</legend>
+          <label>Femenino
+            <input type="radio" name="sex" checked>
+          </label>
+          <label>Masculino
+            <input type="radio" name="sex">
+          </label>
+        </fieldset>
+        <br>
+        <label for="artist">¿Cuál es tu artista favorito?</label><br> 
+        <input id="artist" type="text" placeholder="Artista Favorito">
+        <br><br>
+        <fieldset>
+          <legend>¿Tienes mascotas?</legend>
+          <label>Perro
+            <input type="checkbox">
+          </label>
+          <label>Gato
+            <input type="checkbox">
+          </label>
+          <label>Otro
+            <input type="checkbox">
+          </label>
+        </fieldset>
+        <br><br>
+        <label>Ingresa tus Comentarios</label><br>
+        <textarea name="comments" cols="60" rows="10">Comentarios</textarea>
+        <br><br>
+        <button>Enviar</button>
+        
+
+
+
+    </form>
+    
+</body>
 </html>
