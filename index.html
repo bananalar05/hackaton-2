@@ -1,75 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Formularios</title>
-</head>
-<body>
-    <form type="GET" action="#">
-        <label for="name">Nombre</label> 
-        <input id="name" type="text" placeholder="Nombre">
-
-        <label for="lastname">Apellido</label> 
-        <input id="lastname" type="text" placeholder="Apellido">
-        <br><br>
-        <label for="age">Edad</label> 
-        <input id="age" type="number" placeholder="Edad">
-        <br><br>
-        <label for="country">Nacionalidad</label> 
-        <select id="country" name="">
-        <!--el atributo name es para que el backend lo coja-->
-            <option value="">Selecciona tu país</option>
-            <option value="1">Perú</option>
-            <option value="2">Colombia</option>
-            <option value="3">Argentina</option>
-            <option value="4">Brasil</option>
-        </select>
-        <br><br>
-        <label for="district">Distrito</label> 
-        <input id="district" type="text" placeholder="Distrito">
-
-        <label for="mobile">Celular</label> 
-        <input id="mobile" type="number" placeholder="Celular">
-        <br><br>
-        <label for="email">Correo</label> 
-        <input id="email" type="email" placeholder="Correo">
-        <br><br>
-        <fieldset>
+    <link rel="stylesheet" href="main.css" />
+    <style>
+      input:valid{
+        border-color: forestgreen;
+      }
+      input:invalid{
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form action="#">
+        <h1>Formulario</h1><br>
+        <div>
+          <label for="name">Nombre</label>
+          <input name="nombre" id="name" type="text" placeholder="Nombre" pattern="[A-Za-z]+" required />
+        </div>
+        <div>
+          <label for="lastname">Apellido</label>
+          <input
+            name="apellido"
+            id="lastname"
+            type="text"
+            placeholder="Apellido"  pattern="[A-Za-z]+" required
+          />
+        </div>
+        <div>
+          <label for="age">Edad</label>
+          <input name="edad" id="age" type="number" placeholder="Edad" min="18" max="65" required />
+        </div>
+        <div>
+          <label for="country">Nacionalidad</label>
+          <select name="nacionalidad" id="country" required>
+            <!--el atributo name es para que el backend lo coja-->
+            <div>
+              <option value="">Selecciona tu país</option>
+              <option value="1">Perú</option>
+              <option value="2">Colombia</option>
+              <option value="3">Argentina</option>
+              <option value="4">Brasil</option>
+            </div>
+          </select>
+        </div>
+        <div>
+          <label for="district">Distrito</label>
+          <input
+            name="Distrito"
+            id="district"
+            type="text"
+            placeholder="Distrito" pattern="[A-Za-z0-9]+"  required
+          />
+        </div>
+        <div>
+          <label for="mobile">Celular</label>
+          <input
+            name="celular"
+            id="mobile"
+            type="number"
+            placeholder="Celular" pattern="[0-9]+"  required
+          />
+        </div>
+        <div>
+          <label for="email">Correo</label>
+          <input name="mail" id="email" type="email" placeholder="Correo" required/>
+        </div>
+        <div>
           <legend>Sexo</legend>
-          <label>Femenino
-            <input type="radio" name="sex" checked>
-          </label>
-          <label>Masculino
-            <input type="radio" name="sex">
-          </label>
-        </fieldset>
-        <br>
-        <label for="artist">¿Cuál es tu artista favorito?</label><br> 
-        <input id="artist" type="text" placeholder="Artista Favorito">
-        <br><br>
-        <fieldset>
+          <div class="sex">
+            <label
+              >Femenino
+              <input type="radio" name="sex" checked />
+            </label>
+            <label
+              >Masculino
+              <input type="radio" name="sex" />
+            </label>
+          </div>
+        </div>
+        <div>
+          <label for="artist">¿Cuál es tu artista favorito?</label>
+          <input
+            name="artista"
+            id="artist"
+            type="text"
+            placeholder="Artista Favorito" pattern="[A-Za-z0-9]+" required
+          />
+        </div>
+        <div>
           <legend>¿Tienes mascotas?</legend>
-          <label>Perro
-            <input type="checkbox">
-          </label>
-          <label>Gato
-            <input type="checkbox">
-          </label>
-          <label>Otro
-            <input type="checkbox">
-          </label>
-        </fieldset>
-        <br><br>
-        <label>Ingresa tus Comentarios</label><br>
-        <textarea name="comments" cols="60" rows="10">Comentarios</textarea>
-        <br><br>
-        <button>Enviar</button>
-        
-
-
-
-    </form>
-    
-</body>
+          <div>
+            <label
+              >Perro
+              <input type="checkbox" />
+            </label>
+            <label
+              >Gato
+              <input type="checkbox" />
+            </label>
+            <label
+              >Otros
+              <input type="checkbox" />
+            </label>
+          </div>
+        </div>
+        <div>
+          <label>Ingresa tus Comentarios</label>
+          <div>
+            <textarea
+              name="comentarios"
+              cols="50"
+              rows="8"
+              placeholder="Comentarios"
+            ></textarea>
+          </div>
+        </div>
+        <div>
+          <button>Enviar</button>
+        </div>
+      </form>
+    </main>
+  </body>
 </html>
